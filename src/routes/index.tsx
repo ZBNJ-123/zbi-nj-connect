@@ -89,17 +89,17 @@ function Home() {
               {
                 icon: BookOpen,
                 title: "100% Free",
-                body: "Our entire 8-month Bible class is offered completely free of charge. No tuition, no hidden costs — just open access to the Word.",
+                body: "Our entire 10-month Bible class is offered completely free of charge. No tuition, no hidden costs — just open access to the Word.",
               },
               {
                 icon: Globe,
-                title: "Online or In-Person",
-                body: "Choose the format that fits your life. Join us in person in New Jersey, or study with us online from anywhere.",
+                title: "Flexible format",
+                body: "Our class is offered in-person in Manhattan or online on zoom. Use the format the best fits your schedule.",
               },
               {
                 icon: Users,
                 title: "Open to All",
-                body: "Wherever you're starting from, you're welcome here. Our community is non-denominational and open to people of every background. (Students under 18 require parental permission.)",
+                body: "Wherever you're starting from, you're welcome here. Our community is non-denominational and open to people of every background (Students under 18 years old need parental permission).",
               },
             ].map(({ icon: Icon, title, body }) => (
               <div
@@ -196,7 +196,7 @@ function Home() {
             Ready to Begin Your Journey?
           </h2>
           <p className="mt-6 text-lg text-cream/80">
-            Apply today for our free 8-month Bible class.
+            Apply today for our free 10-month Bible class.
           </p>
           <div className="mt-10">
             <Link to="/bible-class" hash="apply" className="btn-gold">
