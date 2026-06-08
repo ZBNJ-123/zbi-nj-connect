@@ -7,12 +7,12 @@ export const Route = createFileRoute("/faculty")({
 });
 
 const faculty = [
-  { name: "Pastor David Chen", title: "Lead Instructor", bio: "A devoted teacher of Scripture with over 20 years of experience guiding students through the Bible." },
-  { name: "Sarah Mitchell", title: "Senior Advisor", bio: "Walks alongside students through the entire 8-month journey with care and biblical insight." },
-  { name: "James Park", title: "Elementary Section Instructor", bio: "Specializes in the figurative language of Scripture and foundational biblical interpretation." },
-  { name: "Rebecca Lee", title: "Intermediate Section Instructor", bio: "Passionate about prophetic literature and helping students uncover the mysteries of the Old Testament." },
-  { name: "Michael Rivera", title: "Advanced Section Instructor", bio: "Leads the study of Revelation with depth, clarity, and a heart for the truth of God's Word." },
-  { name: "Grace Thompson", title: "Student Advisor", bio: "Provides one-on-one support to ensure every student feels seen, heard, and equipped to grow." },
+  { name: "Leah", title: "Lead Instructor", bio: "" },
+  { name: "Alli", title: "SENIOR ADVISOR", bio: "" },
+  { name: "Edith", title: "SENIOR ADVISOR", bio: "" },
+  { name: "Tsaone", title: "SENIOR ADVISOR", bio: "" },
+  { name: "Rachel", title: "SENIOR ADVISOR", bio: "" },
+  { name: "Ify", title: "SENIOR ADVISOR", bio: "" },
 ];
 
 function FacultyPage() {
