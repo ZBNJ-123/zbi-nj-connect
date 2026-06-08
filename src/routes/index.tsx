@@ -8,24 +8,24 @@ export const Route = createFileRoute("/")({
 
 const events = [
   {
-    title: "Open House",
-    date: "Sat · Sep 14",
-    location: "Bergen County, NJ",
-    desc: "Meet our faculty and learn about the program.",
+    title: "Touch Grass",
+    date: "SAT · JUNE 13",
+    location: "Lincoln Park, Jersey City, NJ",
+    desc: "Be in nature, disconnect, self reflect in gratitude to God",
     img: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=900&q=80",
   },
   {
-    title: "Guest Speaker Night",
-    date: "Fri · Oct 3",
-    location: "Online + In Person",
-    desc: "A special evening of teaching and fellowship.",
+    title: "Event details coming soon!",
+    date: "JUNE 2026",
+    location: "New Jersey",
+    desc: "",
     img: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=900&q=80",
   },
   {
-    title: "Community Worship Gathering",
-    date: "Sun · Oct 19",
+    title: "Event details coming soon!",
+    date: "JUNE 2026 ",
     location: "New Jersey",
-    desc: "Worship and connect with our community.",
+    desc: "",
     img: "https://images.unsplash.com/photo-1507120410856-1f35574c3b45?w=900&q=80",
   },
 ];
