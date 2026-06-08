@@ -20,7 +20,7 @@ function FacultyPage() {
     <Layout>
       <PageHero
         eyebrow="Our Faculty"
-        title="The teachers and advisors who walk with you."
+        title="The instructors and advisors who walk with you."
         subtitle="Meet the instructors and advisors who guide students through the Bible class with knowledge, care, and dedication."
       />
       <section className="bg-cream">
