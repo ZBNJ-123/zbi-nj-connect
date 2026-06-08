@@ -46,8 +46,8 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-cream/80">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gold" />
-                <a href="mailto:info@zbinj.org" className="hover:text-gold">
-                  info@zbinj.org
+                <a href="mailto:zionbiblicalinstituteofnj@gmail.com" className="hover:text-gold">
+                  zionbiblicalinstituteofnj@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
