@@ -42,9 +42,6 @@ function Home() {
         />
         <div className="absolute inset-0 bg-navy/80" />
         <div className="relative mx-auto max-w-6xl px-6 py-32 lg:py-44 lg:px-10 text-center">
-          <p className="text-xs uppercase tracking-[0.28em] text-gold mb-5 fade-in-up">
-            Non-Denominational · Free · NJ + Online
-          </p>
           <h1 className="text-cream text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl mx-auto fade-in-up">
             Welcome to the Zion Biblical Institute of NJ
           </h1>
