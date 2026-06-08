@@ -52,8 +52,7 @@ function Home() {
             className="mt-8 text-lg md:text-xl text-cream/85 max-w-2xl mx-auto leading-relaxed fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            You're welcome here. We're excited to walk with you as you grow in your journey with
-            God.
+            We're excited to walk with you as you grow on your journey with God.
           </p>
           <div
             className="mt-10 flex flex-wrap justify-center gap-4 fade-in-up"
