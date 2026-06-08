@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, BookOpen, Globe, Users, Calendar, MapPin } from "lucide-react";
+import comingSoonAsset from "@/assets/coming-soon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -19,14 +20,14 @@ const events = [
     date: "JUNE 2026",
     location: "New Jersey",
     desc: "",
-    img: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=900&q=80",
+    img: comingSoonAsset.url,
   },
   {
     title: "Event details coming soon!",
     date: "JULY 2026 ",
     location: "New Jersey",
     desc: "",
-    img: "https://images.unsplash.com/photo-1507120410856-1f35574c3b45?w=900&q=80",
+    img: comingSoonAsset.url,
   },
 ];
 
