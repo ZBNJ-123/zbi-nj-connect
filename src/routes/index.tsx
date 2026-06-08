@@ -27,7 +27,7 @@ const events = [
     date: "JULY 2026 ",
     location: "New Jersey",
     desc: "",
-    img: "https://images.unsplash.com/photo-1507120410856-1f35574c3b45?w=900&q=80",
+    img: comingSoonAsset.url,
   },
 ];
 
