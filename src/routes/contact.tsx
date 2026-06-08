@@ -34,6 +34,15 @@ function ContactPage() {
       return;
     }
     setErrors({});
+
+    const { name, email, subject, message } = result.data;
+    const to = "zionbiblicalinstituteofnj@gmail.com";
+    const mailSubject = subject ? String(subject) : "Contact Form Submission";
+    const mailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+    window.location.href = mailtoUrl;
     setSent(true);
   }
 
