@@ -31,15 +31,15 @@ const stages = [
 ];
 
 const differentiators = [
-  { icon: BookOpen, title: "In-depth and systematic", body: "A structured curriculum that builds step by step, not scattered topics." },
+  { icon: BookOpen, title: "In-depth and structured", body: "A structured curriculum that builds step by step, not scattered topics." },
   { icon: Presentation, title: "Live instruction with visual lessons", body: "Real instructors teach every class, supported by clear, visual PowerPoint lessons." },
   { icon: LifeBuoy, title: "A support network", body: "Every student is paired with advisors who walk alongside them through the entire journey." },
 ];
 
 const reviews = [
-  { initials: "J.P.", quote: "This class was excellent. I really grew in my relationship with God, and I loved how we decoded Scripture — like working through parables across the Bible using other scriptures to interpret them. Everything was rooted in the Bible itself, not people's opinions, and I really appreciated that." },
-  { initials: "A.K.", quote: "At first I was hesitant about joining, but I'm so glad I did. My view of the Bible is completely different now. I understand more about God's will and I have so much more confidence in my knowledge of Scripture." },
-  { initials: "R.S.", quote: "I had a great time in the class. The instructor was wonderful and the content was deeply insightful. I highly recommend it!" },
+  { initials: "J.P. - Graduated in 2022", quote: "This class was excellent. I really grew in my relationship with God, and I loved how we decoded Scripture — like working through parables across the Bible using other scriptures to interpret them. Everything was rooted in the Bible itself, not people's opinions, and I really appreciated that." },
+  { initials: "A.K. - Graduated in 2020", quote: "At first I was hesitant about joining, but I'm so glad I did. My view of the Bible is completely different now. I understand more about God's will and I have so much more confidence in my knowledge of Scripture." },
+  { initials: "R.S. - Graduated in 2024", quote: "I had a great time in the class. The instructor was wonderful and the content was deeply insightful. I highly recommend it!" },
 ];
 
 const applicationSchema = z.object({
@@ -61,8 +61,8 @@ function BibleClass() {
     <Layout>
       <PageHero
         eyebrow="The Class"
-        title="The Free 8-Month Bible Class"
-        subtitle="An in-depth, systematic journey through Scripture — taught live, supported by advisors, and completely free."
+        title="The Free 10-Month Bible Class"
+        subtitle="An in-depth, systematic journey through Scripture — taught live or on zoom, supported by advisors, and completely free."
       />
 
       {/* Intro */}
@@ -73,7 +73,7 @@ function BibleClass() {
             you a comprehensive understanding of the Word of God. Taught live by our instructors
             using visual PowerPoint lessons, the course is supported by a network of advisors who
             walk with each student through every stage. The class is offered online and in-person
-            in New Jersey, completely free of charge.
+            in Manhattan, completely free of charge.
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ function BibleClass() {
               One journey, three sequential sections.
             </h2>
             <p className="mt-5 text-ink/80 leading-relaxed">
-              Our single 8-month course is divided into three sequential sections. Every student
+              Our single 10-month course is divided into three sequential sections. Every student
               progresses through all three to gain a complete understanding of Scripture.
             </p>
           </div>
@@ -190,7 +190,7 @@ function BibleClass() {
               </div>
               <h3 className="mt-5 text-2xl font-bold">Online</h3>
               <p className="mt-3 text-ink/80 leading-relaxed">
-                Join from anywhere. Live virtual classes with the same instructors and support.
+                Join from anywhere in New Jersey or New York. Live virtual classes with the same instructors and support.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-10 border border-border text-center">
@@ -199,7 +199,7 @@ function BibleClass() {
               </div>
               <h3 className="mt-5 text-2xl font-bold">In-Person</h3>
               <p className="mt-3 text-ink/80 leading-relaxed">
-                Meet with us in New Jersey for an in-person classroom experience.
+                Meet with us in Manhattan for an in-person classroom experience.
               </p>
             </div>
           </div>
