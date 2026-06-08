@@ -84,6 +84,9 @@ function Home() {
       {/* Three feature cards */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+          <h2 className="text-center text-3xl md:text-4xl font-bold text-navy mb-12">
+            The Bible class we offer
+          </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
