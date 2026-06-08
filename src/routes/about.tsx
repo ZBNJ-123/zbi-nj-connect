@@ -16,7 +16,7 @@ const sections = [
   {
     eyebrow: "Our Story",
     title: "A community rooted in the Word.",
-    body: "Zion Biblical Institute of New Jersey was founded in 2019 with a simple heart: to share the unfiltered Word of God with anyone who is interested, and to build a loving, joyful community right here in New Jersey — a place where people from all walks of life can come together, learn, and grow.",
+    body: "The Zion Biblical Institute of New Jersey was founded in 2019 with a simple heart: to share the unfiltered Word of God with anyone who is interested, and to build a loving, joyful community right here in New Jersey — a place where people from all walks of life can come together, learn, and grow.",
     img: "https://images.unsplash.com/photo-1499377193864-82682aefed04?w=1100&q=80",
   },
   {
@@ -32,8 +32,8 @@ function About() {
     <Layout>
       <PageHero
         eyebrow="About Us"
-        title="A welcoming home for the Word of God."
-        subtitle="Non-denominational. Free. Built around community."
+        title="Welcome!"
+        subtitle="Founded in 2019. Built around Community. Grounded in the Word of God.  "
       />
       {sections.map((s, i) => (
         <section key={s.title} className={i % 2 === 0 ? "bg-cream" : "bg-white"}>
