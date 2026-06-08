@@ -94,7 +94,7 @@ function Home() {
               {
                 icon: Globe,
                 title: "Flexible format",
-                body: "Our class is offered in-person in Manhattan or online on zoom. Use the format the best fits your schedule.",
+                body: "Our class is offered in-person in Manhattan or online on zoom. Use the format that best fits your schedule.",
               },
               {
                 icon: Users,
