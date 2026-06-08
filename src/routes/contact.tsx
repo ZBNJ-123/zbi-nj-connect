@@ -106,7 +106,7 @@ function ContactPage() {
           >
             {sent && (
               <div className="mb-6 p-4 bg-gold/20 border border-gold/40 rounded-lg text-navy text-sm font-semibold">
-                Thank you — your message has been received.
+                Opening your email app with your message pre-filled. Just hit send!
               </div>
             )}
             <div className="space-y-5">
