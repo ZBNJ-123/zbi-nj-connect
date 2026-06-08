@@ -58,8 +58,8 @@ function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-ink/60 font-semibold">Email</p>
-                  <a href="mailto:info@zbinj.org" className="text-navy font-semibold hover:text-gold">
-                    info@zbinj.org
+                  <a href="mailto:zionbiblicalinstituteofnj@gmail.com" className="text-navy font-semibold hover:text-gold">
+                    zionbiblicalinstituteofnj@gmail.com
                   </a>
                 </div>
               </li>
