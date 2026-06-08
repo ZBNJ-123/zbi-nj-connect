@@ -34,6 +34,15 @@ function ContactPage() {
       return;
     }
     setErrors({});
+
+    const { name, email, subject, message } = result.data;
+    const to = "zionbiblicalinstituteofnj@gmail.com";
+    const mailSubject = subject ? String(subject) : "Contact Form Submission";
+    const mailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+    window.location.href = mailtoUrl;
     setSent(true);
   }
 
@@ -97,7 +106,7 @@ function ContactPage() {
           >
             {sent && (
               <div className="mb-6 p-4 bg-gold/20 border border-gold/40 rounded-lg text-navy text-sm font-semibold">
-                Thank you — your message has been received.
+                Opening your email app with your message pre-filled. Just hit send!
               </div>
             )}
             <div className="space-y-5">
