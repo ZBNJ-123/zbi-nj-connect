@@ -40,19 +40,6 @@ const reviews = [
   { initials: "R.S. - Graduated in 2024", quote: "I had a great time in the class. The instructor was wonderful and the content was deeply insightful. I highly recommend it!" },
 ];
 
-const applicationSchema = z.object({
-  fullName: z.string().trim().min(1, "Full name is required").max(100),
-  email: z.string().trim().email("Please enter a valid email").max(255),
-  phone: z.string().trim().max(40).optional().or(z.literal("")),
-  city: z.string().trim().min(1, "Town/City is required").max(100),
-  state: z.string().trim().min(1, "State is required").max(60),
-  age: z.coerce.number().int().min(1, "Please enter a valid age").max(120),
-  format: z.enum(["Online", "In-Person", "Either"], { errorMap: () => ({ message: "Please choose a format" }) }),
-  interested: z.literal("on", { errorMap: () => ({ message: "Please confirm your interest" }) }),
-  message: z.string().trim().max(2000).optional().or(z.literal("")),
-});
-
-const US_STATES = ["New Jersey", "New York", "Pennsylvania", "Connecticut", "Massachusetts", "Other"];
 
 function BibleClass() {
   return (
