@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
-import { BookOpen, Layers, Compass, Users, Presentation, LifeBuoy, ArrowRight, Quote, Monitor, MapPin } from "lucide-react";
+import { BookOpen, Layers, Compass, Presentation, LifeBuoy, ArrowRight, Quote, Monitor, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/bible-class")({
   component: BibleClass,
