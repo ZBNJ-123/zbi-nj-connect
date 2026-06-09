@@ -228,7 +228,7 @@ function ApplyForm() {
         <p className="mt-6 text-center text-sm text-ink/70">
           Having trouble with the form?{" "}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScC3FBJcBoGV5ZrDJA00w_LT_eW31C9_HJlapOfLxDxMlVggg/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScC3FBJcBoGV5ZrDJA00w_LT_eW31C9_HJlapOfLxDxMlVggg/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
             className="text-navy font-semibold underline hover:text-gold"
