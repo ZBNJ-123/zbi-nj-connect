@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, BookOpen, Globe, Users, Calendar, MapPin } from "lucide-react";
 import comingSoonAsset from "@/assets/coming-soon.png.asset.json";
+import bibleAsset from "@/assets/pexels-bible.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -125,7 +126,7 @@ function Home() {
       <section className="bg-cream">
         <div className="mx-auto max-w-7xl grid gap-12 lg:grid-cols-2 lg:items-center px-6 py-24 lg:px-10">
           <img
-            src="https://images.unsplash.com/photo-1490127252417-7c393f993ee4?w=1100&q=80"
+            src={bibleAsset.url}
             alt="An open Bible with soft natural light"
             className="rounded-2xl object-cover w-full h-[420px] shadow-sm"
           />
