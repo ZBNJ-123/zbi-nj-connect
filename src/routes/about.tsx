@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
+import bibleOpenAsset from "@/assets/bible-open.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -23,7 +24,7 @@ const sections = [
     eyebrow: "Community & Partnerships",
     title: "Faith grows best in community.",
     body: "We believe faith grows best in community. That's why we partner with organizations like The Healing Hive to create spaces where people from all different backgrounds can fellowship, build friendships, and strengthen the communities around them.",
-    img: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=1100&q=80",
+    img: bibleOpenAsset.url,
   },
 ];
 
