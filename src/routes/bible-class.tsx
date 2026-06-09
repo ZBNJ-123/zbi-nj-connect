@@ -213,6 +213,51 @@ function BibleClass() {
 }
 
 function ApplyForm() {
+  return (
+    <section id="apply" className="bg-cream scroll-mt-24">
+      <div className="mx-auto max-w-4xl px-6 py-24 lg:px-10">
+        <div className="text-center mb-12">
+          <p className="text-xs uppercase tracking-[0.24em] text-gold mb-3">Apply</p>
+          <h2 className="text-3xl md:text-5xl font-bold">Ready to Begin? Apply Below</h2>
+          <p className="mt-4 text-ink/80 leading-relaxed">
+            Fill out the form and we'll be in touch with next steps. Applicants under 18 require
+            parental permission.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScC3FBJcBoGV5ZrDJA00w_LT_eW31C9_HJlapOfLxDxMlVggg/viewform?embedded=true"
+            width="100%"
+            height="1200"
+            frameBorder={0}
+            marginHeight={0}
+            marginWidth={0}
+            title="Bible Class Application Form"
+            className="w-full"
+          >
+            Loading…
+          </iframe>
+        </div>
+
+        <p className="mt-6 text-center text-sm text-ink/70">
+          Having trouble with the form?{" "}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScC3FBJcBoGV5ZrDJA00w_LT_eW31C9_HJlapOfLxDxMlVggg/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-navy font-semibold underline hover:text-gold"
+          >
+            Open it in a new tab
+          </a>
+          .
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function _UnusedApplyForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -234,17 +279,8 @@ function ApplyForm() {
   }
 
   return (
-    <section id="apply" className="bg-cream scroll-mt-24">
-      <div className="mx-auto max-w-3xl px-6 py-24 lg:px-10">
-        <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.24em] text-gold mb-3">Apply</p>
-          <h2 className="text-3xl md:text-5xl font-bold">Ready to Begin? Apply Below</h2>
-          <p className="mt-4 text-ink/80 leading-relaxed">
-            Fill out the form and we'll be in touch with next steps. Applicants under 18 require
-            parental permission.
-          </p>
-        </div>
-
+    <section className="hidden">
+      <div>
         {submitted ? (
           <div className="bg-white rounded-2xl shadow-sm border border-gold p-10 text-center">
             <Users className="h-10 w-10 text-gold mx-auto" />
