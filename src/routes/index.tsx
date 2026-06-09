@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, BookOpen, Globe, Users, Calendar, MapPin } from "lucide-react";
 import comingSoonAsset from "@/assets/coming-soon.png.asset.json";
-import bibleOpenAsset from "@/assets/bible-open.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -14,7 +13,7 @@ const events = [
     date: "SAT · JUNE 13",
     location: "Lincoln Park, Jersey City, NJ",
     desc: "Be in nature, disconnect, self reflect in gratitude to God",
-    img: bibleOpenAsset.url,
+    img: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=900&q=80",
   },
   {
     title: "Event details coming soon!",
