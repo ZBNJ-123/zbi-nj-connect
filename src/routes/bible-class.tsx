@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
-import { BookOpen, Layers, Compass, Users, Presentation, LifeBuoy, ArrowRight, Quote, Monitor, MapPin } from "lucide-react";
+import { BookOpen, Layers, Compass, Presentation, LifeBuoy, ArrowRight, Quote, Monitor, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/bible-class")({
   component: BibleClass,
@@ -42,19 +40,6 @@ const reviews = [
   { initials: "R.S. - Graduated in 2024", quote: "I had a great time in the class. The instructor was wonderful and the content was deeply insightful. I highly recommend it!" },
 ];
 
-const applicationSchema = z.object({
-  fullName: z.string().trim().min(1, "Full name is required").max(100),
-  email: z.string().trim().email("Please enter a valid email").max(255),
-  phone: z.string().trim().max(40).optional().or(z.literal("")),
-  city: z.string().trim().min(1, "Town/City is required").max(100),
-  state: z.string().trim().min(1, "State is required").max(60),
-  age: z.coerce.number().int().min(1, "Please enter a valid age").max(120),
-  format: z.enum(["Online", "In-Person", "Either"], { errorMap: () => ({ message: "Please choose a format" }) }),
-  interested: z.literal("on", { errorMap: () => ({ message: "Please confirm your interest" }) }),
-  message: z.string().trim().max(2000).optional().or(z.literal("")),
-});
-
-const US_STATES = ["New Jersey", "New York", "Pennsylvania", "Connecticut", "Massachusetts", "Other"];
 
 function BibleClass() {
   return (
@@ -213,29 +198,9 @@ function BibleClass() {
 }
 
 function ApplyForm() {
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const data = Object.fromEntries(fd.entries());
-    const result = applicationSchema.safeParse(data);
-    if (!result.success) {
-      const errs: Record<string, string> = {};
-      for (const issue of result.error.issues) {
-        errs[issue.path.join(".")] = issue.message;
-      }
-      setErrors(errs);
-      return;
-    }
-    setErrors({});
-    setSubmitted(true);
-  }
-
   return (
     <section id="apply" className="bg-cream scroll-mt-24">
-      <div className="mx-auto max-w-3xl px-6 py-24 lg:px-10">
+      <div className="mx-auto max-w-4xl px-6 py-24 lg:px-10">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.24em] text-gold mb-3">Apply</p>
           <h2 className="text-3xl md:text-5xl font-bold">Ready to Begin? Apply Below</h2>
@@ -245,126 +210,35 @@ function ApplyForm() {
           </p>
         </div>
 
-        {submitted ? (
-          <div className="bg-white rounded-2xl shadow-sm border border-gold p-10 text-center">
-            <Users className="h-10 w-10 text-gold mx-auto" />
-            <h3 className="mt-4 text-2xl font-bold">Thank you!</h3>
-            <p className="mt-3 text-ink/80">
-              Your application has been received. We'll be in touch with you soon about next steps.
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={onSubmit}
-            className="bg-white rounded-2xl shadow-sm border border-border p-8 lg:p-10 space-y-6"
-            noValidate
+        <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScC3FBJcBoGV5ZrDJA00w_LT_eW31C9_HJlapOfLxDxMlVggg/viewform?embedded=true"
+            width="100%"
+            height="1200"
+            frameBorder={0}
+            marginHeight={0}
+            marginWidth={0}
+            title="Bible Class Application Form"
+            className="w-full"
           >
-            <div className="grid gap-6 md:grid-cols-2">
-              <TextField label="Full Name" name="fullName" required error={errors.fullName} />
-              <TextField label="Email" name="email" type="email" required error={errors.email} />
-              <TextField label="Phone (optional)" name="phone" type="tel" error={errors.phone} />
-              <TextField label="Age" name="age" type="number" required error={errors.age} />
-              <TextField label="Town / City" name="city" required error={errors.city} />
-              <div>
-                <label className="block text-sm font-semibold text-navy mb-2">
-                  State <span className="text-destructive">*</span>
-                </label>
-                <select
-                  name="state"
-                  defaultValue="New Jersey"
-                  className="w-full rounded-lg border border-border bg-cream/30 px-4 py-3 text-ink focus:outline-none focus:ring-2 focus:ring-gold/60"
-                >
-                  {US_STATES.map((s) => (
-                    <option key={s}>{s}</option>
-                  ))}
-                </select>
-                {errors.state && <p className="mt-1 text-xs text-destructive">{errors.state}</p>}
-              </div>
-            </div>
+            Loading…
+          </iframe>
+        </div>
 
-            <fieldset>
-              <legend className="block text-sm font-semibold text-navy mb-3">
-                Preferred Format <span className="text-destructive">*</span>
-              </legend>
-              <div className="flex flex-wrap gap-3">
-                {["Online", "In-Person", "Either"].map((opt, i) => (
-                  <label
-                    key={opt}
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-border bg-cream/30 cursor-pointer hover:border-gold transition has-[:checked]:border-gold has-[:checked]:bg-gold/10"
-                  >
-                    <input
-                      type="radio"
-                      name="format"
-                      value={opt}
-                      defaultChecked={i === 2}
-                      className="accent-gold"
-                    />
-                    <span className="text-sm font-medium text-ink">{opt}</span>
-                  </label>
-                ))}
-              </div>
-              {errors.format && <p className="mt-2 text-xs text-destructive">{errors.format}</p>}
-            </fieldset>
-
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="interested"
-                className="mt-1 h-4 w-4 accent-gold"
-              />
-              <span className="text-sm text-ink">
-                Yes, I'm interested in the course. <span className="text-destructive">*</span>
-              </span>
-            </label>
-            {errors.interested && (
-              <p className="-mt-3 text-xs text-destructive">{errors.interested}</p>
-            )}
-
-            <div>
-              <label className="block text-sm font-semibold text-navy mb-2">
-                Message or Questions (optional)
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full rounded-lg border border-border bg-cream/30 px-4 py-3 text-ink focus:outline-none focus:ring-2 focus:ring-gold/60"
-              />
-            </div>
-
-            <button type="submit" className="btn-gold w-full justify-center">
-              Submit Application <ArrowRight className="h-4 w-4" />
-            </button>
-          </form>
-        )}
+        <p className="mt-6 text-center text-sm text-ink/70">
+          Having trouble with the form?{" "}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScC3FBJcBoGV5ZrDJA00w_LT_eW31C9_HJlapOfLxDxMlVggg/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-navy font-semibold underline hover:text-gold"
+          >
+            Open it in a new tab
+          </a>
+          .
+        </p>
       </div>
     </section>
   );
 }
 
-function TextField({
-  label,
-  name,
-  type = "text",
-  required,
-  error,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-  error?: string;
-}) {
-  return (
-    <div>
-      <label className="block text-sm font-semibold text-navy mb-2">
-        {label} {required && <span className="text-destructive">*</span>}
-      </label>
-      <input
-        name={name}
-        type={type}
-        className="w-full rounded-lg border border-border bg-cream/30 px-4 py-3 text-ink focus:outline-none focus:ring-2 focus:ring-gold/60"
-      />
-      {error && <p className="mt-1 text-xs text-destructive">{error}</p>}
-    </div>
-  );
-}
