@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, BookOpen, Globe, Users, Calendar, MapPin } from "lucide-react";
 import comingSoonAsset from "@/assets/coming-soon.png.asset.json";
+import bibleAsset from "@/assets/pexels-bible.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
