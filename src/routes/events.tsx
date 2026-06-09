@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { Calendar, MapPin } from "lucide-react";
-import bibleOpenAsset from "@/assets/bible-open-v2.jpg.asset.json";
+import bibleOpenAsset from "@/assets/bible-open.jpg.asset.json";
 
 export const Route = createFileRoute("/events")({
   component: EventsPage,
